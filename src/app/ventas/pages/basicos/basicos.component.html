@@ -6,18 +6,65 @@
 </div>
 <div class="grid">
   <div class="col-4">
-    <p-card header="UpperCase">
-
+    <p-card header="UpperCase"
+            [subheader]="nombre | uppercase">
+            {{nombre}}
     </p-card>
   </div>
   <div class="col-4">
-    <p-card header="LowerCase">
-
+    <p-card header="LowerCase"
+            [subheader]="nombre | lowercase">
+            {{nombre}}
     </p-card>
   </div>
   <div class="col-4">
-    <p-card header="TitleCase">
-
+    <p-card header="TitleCase"
+            [subheader]="nombre | titlecase">
+            {{nombre}}
+    </p-card>
+  </div>
+</div>
+<div class="text-layout">
+  <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipe para manejor de fechas.
+    </p>
+</div>
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>Fecha</li>
+        <li>Fecha | Date</li>
+        <li>Fecha | Date short</li>
+        <li>Fecha | Date long</li>
+        <li>Fecha | Date shortDate</li>
+        <li>Fecha | Date custom</li>
+      </ul>
+      <hr>
+      <ul>
+        <li>Fecha | Date Diff GMT</li>
+        <li>Fecha | Date Diff GMT</li>
+        <li>Fecha | Date Diff Lang</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>{{fecha}}</li>
+        <li>{{fecha | date}}</li>
+        <li>{{fecha | date:'short'}}</li>
+        <li>{{fecha | date:'long'}}</li>
+        <li>{{fecha | date:'shortDate'}}</li>
+        <li>{{fecha | date:'LLLL-EEEE-dd-MM-yy hh:mm aaa'}}</li>
+      </ul>
+      <hr>
+      <ul>
+        <li>{{fecha | date:'long':'GMT-7': 'es-MX'}}</li>
+        <li>{{fecha | date:'long':'GMT-3'}}</li>
+        <li>{{fecha | date:'long':'':'fr'}}</li>
+      </ul>
     </p-card>
   </div>
 </div>
